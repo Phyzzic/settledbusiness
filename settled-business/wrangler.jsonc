@@ -1,0 +1,14 @@
+// Cloudflare Worker (static assets only) for settled.business
+// Deploy from this folder with:  npx wrangler deploy
+{
+  "name": "settled-business",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "settled.business", "custom_domain": true },
+    { "pattern": "www.settled.business", "custom_domain": true }
+  ]
+}
