@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Questions | Settled</title>
+<meta name="description" content="Is Settled free? Does it work offline? Do I need an account? Answers to the common questions.">
+<link rel="canonical" href="https://settled.business/questions">
+<meta property="og:url" content="https://settled.business/questions">
+<meta property="og:title" content="Questions | Settled">
+<meta property="og:description" content="Is Settled free? Does it work offline? Do I need an account? Answers to the common questions.">
+<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Settled">
+<meta property="og:image" content="https://settled.business/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+
+<script>
+  // Apply a saved theme before first paint, so there's no flash.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("settledTheme"); } catch (e) {}
+    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  })();
+  document.documentElement.classList.add("js");
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Settled home">
+      <img class="theme-light-only" src="/img/logo-mark.png" alt="" width="34" height="34">
+      <img class="theme-dark-only" src="/img/logo-mark-dark.png" alt="" width="34" height="34">
+      <span>Settled</span>
+    </a>
+    <nav class="nav-links" aria-label="Pages">
+      <a href="/install">Install</a>
+      <a href="/team">Team</a>
+      <a href="/plans">Plans</a>
+      <a href="/questions" aria-current="page">Questions</a>
+    </nav>
+    <div class="nav-end">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode"></button>
+      <a class="btn btn-clay btn-sm" data-app-link href="https://app.settled.business">Open the app</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="/">Home</a>
+    <a href="/install">Install</a>
+    <a href="/team">Team</a>
+    <a href="/plans">Plans</a>
+    <a href="/questions" aria-current="page">Questions</a>
+    <a data-app-link href="https://app.settled.business">Open the app</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+
+  <section class="faq" id="questions" aria-labelledby="faqTitle">
+    <h1 id="faqTitle">Questions</h1>
+    <div class="faq-list" id="faqList"></div>
+  </section>
+
+  <section class="closing">
+    <p class="closing-title">Be <span class="u">Settled</span>.</p>
+    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="brand brand-sm" href="/">
+      <img class="theme-light-only" src="/img/logo-mark.png" alt="" width="24" height="24">
+      <img class="theme-dark-only" src="/img/logo-mark-dark.png" alt="" width="24" height="24">
+      <span>Settled</span>
+    </a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/install">Install</a>
+      <a href="/team">Team</a>
+      <a href="/plans">Plans</a>
+      <a href="/questions" aria-current="page">Questions</a>
+      <a data-app-link href="https://app.settled.business">Open the app</a>
+    </nav>
+    <p class="footer-copy">© <span id="year">2026</span> Settled</p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>

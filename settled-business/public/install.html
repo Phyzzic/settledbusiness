@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Install Settled on your phone | Settled</title>
+<meta name="description" content="Add Settled to your home screen from Safari or Chrome. No app store, no big download, and it works offline.">
+<link rel="canonical" href="https://settled.business/install">
+<meta property="og:url" content="https://settled.business/install">
+<meta property="og:title" content="Install Settled on your phone | Settled">
+<meta property="og:description" content="Add Settled to your home screen from Safari or Chrome. No app store, no big download, and it works offline.">
+<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Settled">
+<meta property="og:image" content="https://settled.business/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+
+<script>
+  // Apply a saved theme before first paint, so there's no flash.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("settledTheme"); } catch (e) {}
+    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  })();
+  document.documentElement.classList.add("js");
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Settled home">
+      <img class="theme-light-only" src="/img/logo-mark.png" alt="" width="34" height="34">
+      <img class="theme-dark-only" src="/img/logo-mark-dark.png" alt="" width="34" height="34">
+      <span>Settled</span>
+    </a>
+    <nav class="nav-links" aria-label="Pages">
+      <a href="/install" aria-current="page">Install</a>
+      <a href="/team">Team</a>
+      <a href="/plans">Plans</a>
+      <a href="/questions">Questions</a>
+    </nav>
+    <div class="nav-end">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode"></button>
+      <a class="btn btn-clay btn-sm" data-app-link href="https://app.settled.business">Open the app</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="/">Home</a>
+    <a href="/install" aria-current="page">Install</a>
+    <a href="/team">Team</a>
+    <a href="/plans">Plans</a>
+    <a href="/questions">Questions</a>
+    <a data-app-link href="https://app.settled.business">Open the app</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+
+  <section class="install" id="install" aria-labelledby="installTitle">
+    <div class="install-copy">
+      <h1 id="installTitle">Keep it on your phone</h1>
+      <p class="install-lede">You add Settled to your home screen from your browser, so there's no app store and no big download. Once it's installed it works offline too, which helps when the Wi-Fi is down and you need the stopcock.</p>
+      <dl class="install-steps">
+        <div>
+          <dt>iPhone and iPad</dt>
+          <dd>Open the app in Safari, tap <b>Share</b>, then <b>Add to Home Screen</b>.</dd>
+        </div>
+        <div>
+          <dt>Android</dt>
+          <dd>Open the app in Chrome and tap <b>Install</b>. If it doesn't ask, it's under <b>Install app</b> in the menu.</dd>
+        </div>
+        <div>
+          <dt>Computer</dt>
+          <dd>In Chrome or Edge, click the install icon at the right of the address bar.</dd>
+        </div>
+      </dl>
+      <a class="btn btn-forest btn-lg" data-app-link data-app-path="/?install" href="https://app.settled.business/?install">Open the app to install it</a>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <img src="/img/app-screen.webp" alt="" width="390" height="844">
+    </div>
+  </section>
+
+  <section class="closing">
+    <p class="closing-title">Be <span class="u">Settled</span>.</p>
+    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="brand brand-sm" href="/">
+      <img class="theme-light-only" src="/img/logo-mark.png" alt="" width="24" height="24">
+      <img class="theme-dark-only" src="/img/logo-mark-dark.png" alt="" width="24" height="24">
+      <span>Settled</span>
+    </a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/install" aria-current="page">Install</a>
+      <a href="/team">Team</a>
+      <a href="/plans">Plans</a>
+      <a href="/questions">Questions</a>
+      <a data-app-link href="https://app.settled.business">Open the app</a>
+    </nav>
+    <p class="footer-copy">© <span id="year">2026</span> Settled</p>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>

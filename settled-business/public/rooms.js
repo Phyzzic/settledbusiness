@@ -1,5 +1,5 @@
-// Generated from the app’s data.js — the free tips only, used by the
-// “Have a look around” floor plan. Regenerate rather than hand-edit.
+// Generated from the app’s data.js, used by the “Have a look around”
+// floor plan. Regenerate rather than hand-edit.
 const ROOMS = [
   {
     "id": "kitchen",
@@ -11,17 +11,17 @@ const ROOMS = [
       "w": 37.5,
       "h": 35.8
     },
-    "blurb": "Where most of the mess — and most of the questions — happen first.",
+    "blurb": "Where most of the mess, and most of the questions, happen first.",
     "clean": [
       "Wipe spills immediately. A quick wipe stops roughly 90% of stains setting in before they bond to the surface.",
-      "Use a dedicated degreaser on the hob, not all-purpose spray — grease needs a surfactant general cleaners don't have."
+      "Use a proper degreaser on the hob, not all-purpose spray. Grease needs a surfactant that general cleaners don't have."
     ],
     "basic": {
       "title": "Find your stopcock",
-      "text": "Usually under the kitchen sink — know this before you need it in an emergency."
+      "text": "Usually under the kitchen sink. Find it now, before you need it in an emergency."
     },
-    "free": 5,
-    "premium": 6
+    "total": 11,
+    "more": 8
   },
   {
     "id": "bathroom",
@@ -33,17 +33,17 @@ const ROOMS = [
       "w": 25,
       "h": 31.6
     },
-    "blurb": "Damp, limescale, and mystery leaks — the bathroom's greatest hits.",
+    "blurb": "Damp, limescale and mystery leaks.",
     "clean": [
-      "Squeegee the shower glass after every use — this alone stops most limescale build-up before it starts.",
-      "Mould on silicone sealant needs a proper mould remover, not just a bleach spray — bleach only bleaches the surface."
+      "Squeegee the shower glass after every use. That on its own stops most limescale before it starts.",
+      "Mould on silicone sealant needs a proper mould remover, not bleach spray. Bleach only lightens the surface."
     ],
     "basic": {
       "title": "Spotting a leak early",
-      "text": "Check around the base of the toilet and under the sink monthly — stains mean trouble."
+      "text": "Check around the base of the toilet and under the sink once a month. Stains mean trouble."
     },
-    "free": 4,
-    "premium": 5
+    "total": 9,
+    "more": 6
   },
   {
     "id": "living",
@@ -57,15 +57,15 @@ const ROOMS = [
     },
     "blurb": "Dust, fabric, and the radiator nobody's bled since 2019.",
     "clean": [
-      "Vacuum sofas monthly — dust settles deep into fabric fast, not just on the floor around them.",
-      "Clean screens with a dry microfibre cloth only — liquid cleaners can damage anti-glare coatings."
+      "Vacuum sofas once a month. Dust settles deep into the fabric, not just on the floor around them.",
+      "Clean screens with a dry microfibre cloth only. Liquid cleaners can damage anti-glare coatings."
     ],
     "basic": {
       "title": "Bleeding a radiator",
-      "text": "Cold at the top, warm at the bottom means trapped air — here's how to fix it safely."
+      "text": "Cold at the top and warm at the bottom means there's air trapped inside. Here's how to fix it safely."
     },
-    "free": 4,
-    "premium": 4
+    "total": 8,
+    "more": 5
   },
   {
     "id": "bedroom",
@@ -79,15 +79,15 @@ const ROOMS = [
     },
     "blurb": "Dust mites, mattress care, and what to actually wash and how often.",
     "clean": [
-      "Wash bedding weekly — more often than most people assume, especially pillowcases.",
-      "Vacuum the mattress itself every season — dust mites live in it, not just the sheets."
+      "Wash bedding every week, pillowcases especially. It's more often than most people think.",
+      "Rotate or flip a mattress every 3 months to stop uneven wear."
     ],
     "basic": {
       "title": "Smoke alarm checks",
       "text": "Test monthly, replace batteries yearly, replace the whole unit every 10 years."
     },
-    "free": 4,
-    "premium": 3
+    "total": 7,
+    "more": 4
   },
   {
     "id": "utility",
@@ -102,14 +102,14 @@ const ROOMS = [
     "blurb": "Washing machines, detergent drawers, and the smell nobody can place.",
     "clean": [
       "Run an empty hot wash with washing machine cleaner monthly to stop drum odour.",
-      "Clean the detergent drawer every few weeks — it's the usual source of a musty smell."
+      "Clean the detergent drawer every few weeks. It's usually where a musty smell comes from."
     ],
     "basic": {
-      "title": "Finding the washing machine's own stopcock",
-      "text": "Most machines have a dedicated isolation valve behind them, separate from the main stopcock."
+      "title": "Unblocking a washing machine filter",
+      "text": "It's the small door at the bottom of the front. Check it when the machine starts draining slowly."
     },
-    "free": 4,
-    "premium": 2
+    "total": 6,
+    "more": 3
   },
   {
     "id": "hallway",
@@ -123,15 +123,15 @@ const ROOMS = [
     },
     "blurb": "The unglamorous room that matters most when something actually breaks.",
     "clean": [
-      "Skirting boards and door frames collect more dust than you'd think — wipe monthly.",
-      "Doormats trap grit that scratches flooring — shake out weekly and give it a proper wash monthly."
+      "Skirting boards and door frames collect more dust than you'd think. Wipe them once a month.",
+      "Doormats catch grit that would otherwise scratch your floors. Shake them out every week and wash them once a month."
     ],
     "basic": {
       "title": "Fixing a plug / changing a fuse",
       "text": "Which colour wire goes where, and how to pick the right amp fuse."
     },
-    "free": 4,
-    "premium": 2
+    "total": 6,
+    "more": 3
   },
   {
     "id": "garden",
@@ -145,13 +145,14 @@ const ROOMS = [
     },
     "blurb": "Gutters, bins, and the shed nobody's opened since you moved in.",
     "clean": [
+      "Clear the gutters twice a year, in autumn and spring. Blocked gutters are one of the most common causes of damp.",
       "Jet-wash patios annually before algae gets a proper grip and becomes slippery."
     ],
     "basic": {
-      "title": "Bins and recycling, sorted properly",
-      "text": "Different councils split recycling differently — get this right in week one and it stays easy."
+      "title": "Finding your outside stopcock / meter",
+      "text": "Often under a small cover near where your property meets the pavement. You'll need it for leaks that affect the whole house."
     },
-    "free": 2,
-    "premium": 3
+    "total": 5,
+    "more": 2
   }
 ];

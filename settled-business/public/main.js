@@ -1,5 +1,6 @@
 // Settled — settled.business
-// Theme, nav, scroll reveals, the "Have a look around" plan, and the FAQ.
+// Shared by every page: theme, mobile menu, app links.
+// Home page only: the "Have a look around" plan. Questions page only: the FAQ.
 
 (() => {
   // Where the app lives. Every [data-app-link] on the page is pointed here,
@@ -40,9 +41,7 @@
       try { localStorage.setItem("settledTheme", next); } catch (e) {}
       paintThemeButton();
     };
-    // A real crossfade of the whole page where the browser supports it.
-    if (document.startViewTransition && !reduceMotion) document.startViewTransition(apply);
-    else apply();
+    apply();
   }
   themeBtn.addEventListener("click", () => setTheme(currentTheme() === "dark" ? "light" : "dark"));
   // Follow the system setting live, unless someone has picked a theme by hand.
@@ -52,22 +51,6 @@
     if (!saved) { root.dataset.theme = e.matches ? "dark" : "light"; paintThemeButton(); }
   });
   paintThemeButton();
-
-  /* ---------- Nav: frost harder once scrolled, highlight current section ---------- */
-  const nav = document.getElementById("nav");
-  const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 12);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  const navLinks = [...document.querySelectorAll(".nav-links a")];
-  const sections = navLinks.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (!e.isIntersecting) return;
-      navLinks.forEach((a) => a.classList.toggle("is-current", a.getAttribute("href") === "#" + e.target.id));
-    });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  sections.forEach((s) => sectionObserver.observe(s));
 
   // Mobile menu
   const menuBtn = document.getElementById("menuBtn");
@@ -83,25 +66,13 @@
   menu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
 
-  /* ---------- Scroll reveals ---------- */
-  // Siblings revealed together get a small stagger via --i.
-  const revealEls = [...document.querySelectorAll(".reveal")];
-  revealEls.forEach((el) => {
-    const sibs = [...el.parentElement.children].filter((c) => c.classList.contains("reveal"));
-    el.style.setProperty("--i", sibs.indexOf(el));
-  });
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add("is-in"); revealObserver.unobserve(e.target); }
-    });
-  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-  revealEls.forEach((el) => revealObserver.observe(el));
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-  /* ---------- Have a look around ---------- */
+  /* ---------- Have a look around (home page) ---------- */
   const plan = document.getElementById("plan");
+  if (plan && typeof ROOMS !== "undefined") {
   const lines = plan.querySelector(".plan-lines");
   const readout = document.getElementById("readout");
-  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
 
   const buttons = ROOMS.map((r) => {
@@ -120,10 +91,10 @@
   function readoutHTML(r) {
     const tips = r.clean.map((t) => `<li>${esc(t)}</li>`);
     if (r.basic) tips.push(`<li><b>${esc(r.basic.title)}.</b> ${esc(r.basic.text)}</li>`);
-    const more = r.premium > 0 ? `Plus ${r.premium} more with Premium.` : "Everything in here is free.";
+    const more = r.more > 0 ? `${r.more} more ${r.more === 1 ? "tip" : "tips"} for this room in the app.` : "That's everything for this room.";
     return `
-      <div class="readout-inner" style="--accent:${r.accent}">
-        <p class="readout-tag"><i></i>${plural(r.free, "free tip")} in here</p>
+      <div class="readout-inner">
+        <p class="readout-tag">${plural(r.total, "tip")}</p>
         <h3>${esc(r.name)}</h3>
         <p class="readout-blurb">${esc(r.blurb)}</p>
         <ul class="readout-tips">${tips.join("")}</ul>
@@ -164,17 +135,21 @@
     next.focus();
     next.click();
   });
+  }
 
-  /* ---------- FAQ ---------- */
+  /* ---------- FAQ (questions page) ---------- */
   const FAQS = [
-    ["Is it on the App Store?", "No — and that's on purpose. Settled installs straight from your browser (see above), so there's nothing to download from a store and updates reach you the moment they're out."],
-    ["Does it work without signal?", "Yes. Once you've installed it and opened it once, every room and every free tip is saved on your phone, so it works in a basement, a loft, or a new build with no broadband yet."],
-    ["Do I need an account?", "Not to start. Open it and start tapping rooms. An account only comes into it if you go Premium."],
-    ["Is it just for the UK?", "It's written with UK homes in mind — fuse boxes, stopcocks, bin collections — but most of the cleaning advice works anywhere."],
-    ["Can I cancel Premium?", "Whenever you like. It's month to month, and you keep it until the end of the period you've paid for."],
-    ["Will there be more rooms?", "Yes. New rooms and guides are added over time, and Premium includes them at no extra cost."],
+    ["Is it really free?", "Yes. Every room and every tip is free to use."],
+    ["Will it always be free?", "Everything that's free now will stay free. Later on we plan to add Settled Premium, an optional upgrade with extra features on top. You won't need it to use the guide."],
+    ["Is it on the App Store?", "No. You install it from your browser instead (the Install page shows how), so there's nothing to download from a store and updates show up straight away."],
+    ["Does it work without signal?", "Yes. After you've installed it and opened it once, every room and tip is saved on your phone."],
+    ["Do I need an account?", "No. You can use all of it without signing in. If you want an account, you can sign in with Google or with a code sent to your email. There's no password."],
+    ["Can I use it on my phone and my laptop?", "Yes. It works in any modern browser, and you can sign in with the same Google account or email on both."],
+    ["Is it just for the UK?", "It's written for UK homes, so it talks about fuse boxes, stopcocks and council bins. Most of the cleaning advice works anywhere though."],
+    ["Will there be more rooms?", "Yes. New rooms and guides will be added over time."],
   ];
   const faqList = document.getElementById("faqList");
+  if (faqList) {
   faqList.innerHTML = FAQS.map(([q, a], i) => `
     <div class="faq-item">
       <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-${i}" id="faq-q-${i}">
@@ -190,4 +165,5 @@
     item.classList.toggle("is-open", open);
     btn.setAttribute("aria-expanded", String(open));
   });
+  }
 })();
