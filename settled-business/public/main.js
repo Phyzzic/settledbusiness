@@ -80,9 +80,9 @@
     b.type = "button";
     b.className = "room";
     b.dataset.room = r.id;
-    b.style.cssText = `left:${r.plan.x}%;top:${r.plan.y}%;width:${r.plan.w}%;height:${r.plan.h}%;--accent:${r.accent}`;
+    b.style.cssText = `left:${r.plan.x}%;top:${r.plan.y}%;width:${r.plan.w}%;height:${r.plan.h}%`;
     b.setAttribute("aria-pressed", "false");
-    b.innerHTML = `<span>${esc(r.name)}</span>`;
+    b.innerHTML = `${typeof roomIcon === "function" ? roomIcon(r, 30) : ""}<span>${esc(r.name)}</span>`;
     b.addEventListener("click", () => select(r.id));
     plan.insertBefore(b, lines); // drawing stays on top of the room fills
     return b;
@@ -140,6 +140,7 @@
   /* ---------- FAQ (questions page) ---------- */
   const FAQS = [
     ["Is it really free?", "Yes. Every room and every tip is free to use."],
+    ["Can I save tips?", "Yes. Tap the heart on any tip and it goes in your Saved tab. If you sign in, your saved tips and your first-week list show up on your other devices too."],
     ["Will it always be free?", "Everything that's free now will stay free. Later on we plan to add Settled Premium, an optional upgrade with extra features on top. You won't need it to use the guide."],
     ["Is it on the App Store?", "No. You install it from your browser instead (the Install page shows how), so there's nothing to download from a store and updates show up straight away."],
     ["Does it work without signal?", "Yes. After you've installed it and opened it once, every room and tip is saved on your phone."],
