@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://settled.business/install">
 <meta property="og:title" content="Install Settled on your phone | Settled">
 <meta property="og:description" content="Add Settled to your home screen from Safari or Chrome. No app store, no big download, and it works offline.">
-<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#EFF3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   (function () {
     var t = null;
     try { t = localStorage.getItem("settledTheme"); } catch (e) {}
-    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.mode = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   })();
   document.documentElement.classList.add("js");
 </script>
@@ -71,7 +71,7 @@
   <section class="install" id="install" aria-labelledby="installTitle">
     <div class="install-copy">
       <h1 id="installTitle">Keep it on your phone</h1>
-      <p class="install-lede">You add Settled to your home screen from your browser, so there's no app store and no big download. Once it's installed it works offline too, which helps when the Wi-Fi is down and you need the stopcock.</p>
+      <p class="install-lede">You add Settled to your home screen from your browser, so there's no app store and no big download. Once it's on your phone it works without signal too, so it's there when you need it.</p>
       <dl class="install-steps">
         <div>
           <dt>iPhone and iPad</dt>
@@ -93,10 +93,6 @@
     </div>
   </section>
 
-  <section class="closing">
-    <p class="closing-title">Be <span class="u">Settled</span>.</p>
-    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-  </section>
 
 </main>
 

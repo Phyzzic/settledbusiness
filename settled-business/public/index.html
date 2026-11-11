@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Settled: the manual nobody hands you with the keys</title>
-<meta name="description" content="Settled walks you round your own house, room by room, and tells you what to clean, what to check and what to do when something goes wrong. Free, plain English, and it installs from your browser.">
+<meta name="description" content="Settled walks you round your own house, room by room, and tells you what to clean, what to check and what to do when something goes wrong. Free, and it works on your phone.">
 <link rel="canonical" href="https://settled.business/">
 <meta property="og:url" content="https://settled.business/">
 <meta property="og:title" content="Settled: the manual nobody hands you with the keys">
-<meta property="og:description" content="Settled walks you round your own house, room by room, and tells you what to clean, what to check and what to do when something goes wrong. Free, plain English, and it installs from your browser.">
-<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta property="og:description" content="Settled walks you round your own house, room by room, and tells you what to clean, what to check and what to do when something goes wrong. Free, and it works on your phone.">
+<meta name="theme-color" content="#EFF3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   (function () {
     var t = null;
     try { t = localStorage.getItem("settledTheme"); } catch (e) {}
-    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.mode = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   })();
   document.documentElement.classList.add("js");
 </script>
@@ -83,13 +83,12 @@
 
   <section class="hero" id="top">
     <div class="hero-copy">
-      <h1>Be <span class="u">Settled</span>.</h1>
-      <p class="hero-lede">Nobody gives you a manual when you get the keys to a house. Settled goes room by room and tells you what to clean, what to check, and what to do when something breaks, in plain English.</p>
+      <h1>Be <span class="u">Settled<svg class="squiggle" viewBox="0 0 300 26" aria-hidden="true"><path pathLength="1" d="M5 15c22-6 41-8 63-4 18 3 30 7 50 5 24-3 39-11 64-10 24 1 33 9 56 8 18-1 33-6 52-9"/></svg></span>.</h1>
+      <p class="hero-lede">The manual nobody hands you with the keys. Settled walks you round your own house, room by room and tells you what to clean, what to check and what to do when something goes wrong... in plain English.</p>
       <div class="hero-actions">
         <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-        <a class="btn btn-quiet btn-lg" href="#look-around">See how it works</a>
+        <a class="hero-more" href="#look-around">Or have a look round first</a>
       </div>
-      <p class="hero-note">Completely free. No account or app store needed.</p>
     </div>
     <div class="phone hero-phone" aria-hidden="true">
       <img src="/img/app-screen.webp" alt="" width="390" height="844">
@@ -97,15 +96,13 @@
   </section>
 
   <section class="problem">
-    <p>You move in and nobody tells you where the stopcock is, what to use on the hob, or why the extractor fan smells. You end up guessing, ringing your mum, or reading forum threads that disagree with each other.</p>
-    <p class="problem-turn">Settled gives you the answer for each room.</p>
+    <p>Getting the keys is the exciting bit. Then the radiator's cold at the top, a switch in the fuse box has flicked down, and you've no idea where the stopcock is. Settled has the answers for every room, so you can fix it and get on with your day.</p>
   </section>
 
   <section class="look" id="look-around" aria-labelledby="lookTitle">
     <div class="look-panel">
       <div class="look-head">
-        <h2 id="lookTitle">Have a look around</h2>
-        <p>Pick a room to see some of the tips from the app.</p>
+        <h2 id="lookTitle">Have a look round</h2>
       </div>
       <div class="look-body">
         <figure class="plan-wrap">
@@ -125,7 +122,7 @@
               </g>
             </svg>
           </div>
-          <figcaption class="plan-caption">Both floors on one plan. Not to scale.</figcaption>
+          <figcaption class="plan-caption">Upstairs and downstairs on one plan. Tap a room.</figcaption>
         </figure>
         <div class="readout" id="readout" aria-live="polite"></div>
       </div>
@@ -135,17 +132,13 @@
   <section class="more" aria-labelledby="moreTitle">
     <h2 id="moreTitle">More about Settled</h2>
     <ul class="more-list">
-      <li><a href="/install"><b>Install it on your phone</b><span>No app store, and it works offline.</span></a></li>
-      <li><a href="/team"><b>Meet the team</b><span>The people writing the guides and building the app.</span></a></li>
-      <li><a href="/plans"><b>What's next</b><span>More rooms and guides, and Settled Premium later on.</span></a></li>
-      <li><a href="/questions"><b>Questions</b><span>Is it free, does it work offline, do I need an account.</span></a></li>
+      <li><a href="/install"><b>Put it on your phone</b><span>Straight from your browser, and it works without signal.</span></a></li>
+      <li><a href="/team"><b>Meet the team</b><span>Who's behind Settled.</span></a></li>
+      <li><a href="/plans"><b>What's next</b><span>More rooms on the way, and Settled Premium later on.</span></a></li>
+      <li><a href="/questions"><b>Questions</b><span>Is it free? Do I need an account? Have a read.</span></a></li>
     </ul>
   </section>
 
-  <section class="closing">
-    <p class="closing-title">Be <span class="u">Settled</span>.</p>
-    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-  </section>
 
 </main>
 

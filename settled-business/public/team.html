@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Meet the team | Settled</title>
-<meta name="description" content="The people writing the guides and building Settled.">
+<meta name="description" content="The people behind Settled.">
 <link rel="canonical" href="https://settled.business/team">
 <meta property="og:url" content="https://settled.business/team">
 <meta property="og:title" content="Meet the team | Settled">
-<meta property="og:description" content="The people writing the guides and building Settled.">
-<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta property="og:description" content="The people behind Settled.">
+<meta name="theme-color" content="#EFF3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   (function () {
     var t = null;
     try { t = localStorage.getItem("settledTheme"); } catch (e) {}
-    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.mode = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   })();
   document.documentElement.classList.add("js");
 </script>
@@ -71,41 +71,77 @@
   <section class="team" id="team" aria-labelledby="teamTitle">
     <div class="section-head">
       <h1 id="teamTitle">Meet the team</h1>
-      <p>The people writing the guides and building the app.</p>
+      <p>The people behind Settled.</p>
     </div>
     <!-- One <li class="person"> per person. Copy one to add someone, delete one to remove them. -->
     <ul class="team-list">
-        <li class="person">
-          <!-- Photo: put a square picture in img/team/ and replace the span below with
-               an img tag that has class="person-photo" and points at that picture. -->
-          <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
-          <h3 class="person-name">Lola Taylor</h3>
-          <p class="person-role">Managing Director</p>
-          <p class="person-bio">send me it on snap</p>
-        </li>
-        <li class="person">
-          <!-- Photo: put a square picture in img/team/ and replace the span below with
-               an img tag that has class="person-photo" and points at that picture. -->
-          <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
-          <h3 class="person-name">Dylan Edwards</h3>
-          <p class="person-role">HR Director</p>
-          <p class="person-bio">send me it on snap</p>
-        </li>
-        <li class="person">
-          <!-- Photo: put a square picture in img/team/ and replace the span below with
-               an img tag that has class="person-photo" and points at that picture. -->
-          <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
-          <h3 class="person-name">leaving blank</h3>
-          <p class="person-role">idk</p>
-          <p class="person-bio">idk or some</p>
-        </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Lola Taylor</h3>
+        <p class="person-role">Managing Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Dylan Edwards</h3>
+        <p class="person-role">HR Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Lily-Rose Docherty</h3>
+        <p class="person-role">Operations Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Freya Bradford</h3>
+        <p class="person-role">Sales Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Phyzzicist</h3>
+        <p class="person-role">Digital Technology Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Sid Felgate</h3>
+        <p class="person-role">Marketing Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">David Mutalama</h3>
+        <p class="person-role">Finance Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
+      <li class="person">
+        <!-- Photo: put a square picture in img/team/ and replace the span below with
+             an img tag that has class="person-photo" and points at that picture. -->
+        <span class="person-photo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.8 7.5-5.8s6.3 2 7.5 5.8"/></svg></span>
+        <h3 class="person-name">Finlay Ashton</h3>
+        <p class="person-role">Finance Director</p>
+        <!-- Add a line about them here: <p class="person-bio">...</p> -->
+      </li>
     </ul>
   </section>
 
-  <section class="closing">
-    <p class="closing-title">Be <span class="u">Settled</span>.</p>
-    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-  </section>
 
 </main>
 

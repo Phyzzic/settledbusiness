@@ -1,24 +1,23 @@
-// Generated from the app’s data.js, used by the “Have a look around”
-// floor plan. Regenerate rather than hand-edit.
+// Generated from the app's data.js, for the "Have a look round" plan.
+// Regenerate rather than hand-edit.
 const ROOMS = [
   {
     "id": "kitchen",
     "name": "Kitchen",
-    "accent": "#C8762A",
     "plan": {
       "x": 0.4,
       "y": 0.5,
       "w": 37.5,
       "h": 35.8
     },
-    "blurb": "Where most of the mess, and most of the questions, happen first.",
+    "blurb": "Where the water turns off, and how to keep on top of the grease.",
     "clean": [
-      "Wipe spills immediately. A quick wipe stops roughly 90% of stains setting in before they bond to the surface.",
-      "Use a proper degreaser on the hob, not all-purpose spray. Grease needs a surfactant that general cleaners don't have."
+      "Wipe spills up while they're still wet. Leave them to dry on and you'll be scrubbing later.",
+      "Use a kitchen degreaser on the hob and the tiles behind it. Normal surface spray just pushes the grease around."
     ],
     "basic": {
       "title": "Find your stopcock",
-      "text": "Usually under the kitchen sink. Find it now, before you need it in an emergency."
+      "text": "It turns off the water to the whole house, and it's usually under the kitchen sink. Find it now, before you ever need it."
     },
     "total": 11,
     "more": 8
@@ -26,43 +25,41 @@ const ROOMS = [
   {
     "id": "bathroom",
     "name": "Bathroom",
-    "accent": "#1C8C8C",
     "plan": {
       "x": 42.1,
       "y": 52.1,
       "w": 25,
       "h": 31.6
     },
-    "blurb": "Damp, limescale and mystery leaks.",
+    "blurb": "Mould, limescale and keeping an eye out for leaks.",
     "clean": [
-      "Squeegee the shower glass after every use. That on its own stops most limescale before it starts.",
-      "Mould on silicone sealant needs a proper mould remover, not bleach spray. Bleach only lightens the surface."
+      "Squeegee the shower screen after you've used it. It takes ten seconds and stops limescale building up.",
+      "A mould spray will shift black marks on the sealant round the bath. If they keep coming back, the mould has got into the silicone and it needs cutting out and redoing."
     ],
     "basic": {
       "title": "Spotting a leak early",
-      "text": "Check around the base of the toilet and under the sink once a month. Stains mean trouble."
+      "text": "A quick check every month or so means you catch a leak before it gets into the floor."
     },
     "total": 9,
     "more": 6
   },
   {
     "id": "living",
-    "name": "Living Room",
-    "accent": "#5B57D1",
+    "name": "Living room",
     "plan": {
       "x": 37.9,
       "y": 0.5,
       "w": 61.7,
       "h": 35.8
     },
-    "blurb": "Dust, fabric, and the radiator nobody's bled since 2019.",
+    "blurb": "Radiators, draughts and keeping the dust down.",
     "clean": [
-      "Vacuum sofas once a month. Dust settles deep into the fabric, not just on the floor around them.",
-      "Clean screens with a dry microfibre cloth only. Liquid cleaners can damage anti-glare coatings."
+      "Hoover the sofa with the upholstery tool every few weeks, and get down the sides of the cushions while you're there.",
+      "Clean the TV with a dry microfibre cloth. Sprays can damage the coating on the screen."
     ],
     "basic": {
       "title": "Bleeding a radiator",
-      "text": "Cold at the top and warm at the bottom means there's air trapped inside. Here's how to fix it safely."
+      "text": "If a radiator's cold at the top and warm at the bottom, there's air trapped in it."
     },
     "total": 8,
     "more": 5
@@ -70,87 +67,83 @@ const ROOMS = [
   {
     "id": "bedroom",
     "name": "Bedroom",
-    "accent": "#9254B8",
     "plan": {
       "x": 0.4,
       "y": 52.1,
       "w": 41.7,
       "h": 31.6
     },
-    "blurb": "Dust mites, mattress care, and what to actually wash and how often.",
+    "blurb": "Bedding, looking after the mattress, and the smoke alarm.",
     "clean": [
-      "Wash bedding every week, pillowcases especially. It's more often than most people think.",
-      "Rotate or flip a mattress every 3 months to stop uneven wear."
+      "Wash your sheets and pillowcases once a week, at 60°C if the label says it's fine.",
+      "Turn the mattress round, head to foot, every few months so it wears evenly. Only flip it over if it's made to be flipped."
     ],
     "basic": {
-      "title": "Smoke alarm checks",
-      "text": "Test monthly, replace batteries yearly, replace the whole unit every 10 years."
+      "title": "Testing smoke alarms",
+      "text": "Test them once a month, and swap the whole alarm for a new one every 10 years."
     },
     "total": 7,
     "more": 4
   },
   {
     "id": "utility",
-    "name": "Utility Room",
-    "accent": "#49707D",
+    "name": "Utility room",
     "plan": {
       "x": 67.1,
       "y": 52.1,
       "w": 32.5,
       "h": 31.6
     },
-    "blurb": "Washing machines, detergent drawers, and the smell nobody can place.",
+    "blurb": "The washing machine, the dryer, and that musty smell.",
     "clean": [
-      "Run an empty hot wash with washing machine cleaner monthly to stop drum odour.",
-      "Clean the detergent drawer every few weeks. It's usually where a musty smell comes from."
+      "Once a month, run the washing machine empty on a hot wash with a machine cleaner or some soda crystals.",
+      "Pull the detergent drawer out and give it a wash every few weeks. That's often where a musty smell is coming from."
     ],
     "basic": {
-      "title": "Unblocking a washing machine filter",
-      "text": "It's the small door at the bottom of the front. Check it when the machine starts draining slowly."
+      "title": "Cleaning the washing machine filter",
+      "text": "If the machine's draining slowly or leaving water in the drum, check this first. It's behind the little flap at the bottom of the front."
     },
     "total": 6,
     "more": 3
   },
   {
     "id": "hallway",
-    "name": "Hallway & Fuse Box",
-    "accent": "#B8464F",
+    "name": "Hallway",
     "plan": {
       "x": 0.4,
       "y": 36.3,
       "w": 99.2,
       "h": 15.8
     },
-    "blurb": "The unglamorous room that matters most when something actually breaks.",
+    "blurb": "The fuse box, plugs, and the locks on the front door.",
     "clean": [
-      "Skirting boards and door frames collect more dust than you'd think. Wipe them once a month.",
-      "Doormats catch grit that would otherwise scratch your floors. Shake them out every week and wash them once a month."
+      "Wipe the skirting boards and door frames once a month. They get dustier than you'd think.",
+      "Give the doormat a shake outside every week so the grit doesn't get walked through the house."
     ],
     "basic": {
-      "title": "Fixing a plug / changing a fuse",
-      "text": "Which colour wire goes where, and how to pick the right amp fuse."
+      "title": "Changing the fuse in a plug",
+      "text": "If something's stopped working but the socket's fine, it might just need a new fuse."
     },
     "total": 6,
     "more": 3
   },
   {
     "id": "garden",
-    "name": "Garden & Exterior",
-    "accent": "#3F8F4F",
+    "name": "Outside",
     "plan": {
       "x": 0.4,
       "y": 88.4,
       "w": 99.2,
       "h": 11.1
     },
-    "blurb": "Gutters, bins, and the shed nobody's opened since you moved in.",
+    "blurb": "Gutters, bins, and the stopcock out the front.",
     "clean": [
-      "Clear the gutters twice a year, in autumn and spring. Blocked gutters are one of the most common causes of damp.",
-      "Jet-wash patios annually before algae gets a proper grip and becomes slippery."
+      "Clear the gutters in spring and autumn. When they're blocked, rain runs down the walls instead, and that's how damp starts.",
+      "Jet wash the patio once a year, before the green stuff makes it slippery."
     ],
     "basic": {
-      "title": "Finding your outside stopcock / meter",
-      "text": "Often under a small cover near where your property meets the pavement. You'll need it for leaks that affect the whole house."
+      "title": "The outside stopcock",
+      "text": "If you can't turn the water off inside, there's usually another stopcock outside, under a small cover near the pavement."
     },
     "total": 5,
     "more": 2

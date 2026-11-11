@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://settled.business/questions">
 <meta property="og:title" content="Questions | Settled">
 <meta property="og:description" content="Is Settled free? Does it work offline? Do I need an account? Answers to the common questions.">
-<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#EFF3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   (function () {
     var t = null;
     try { t = localStorage.getItem("settledTheme"); } catch (e) {}
-    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.mode = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   })();
   document.documentElement.classList.add("js");
 </script>
@@ -73,10 +73,6 @@
     <div class="faq-list" id="faqList"></div>
   </section>
 
-  <section class="closing">
-    <p class="closing-title">Be <span class="u">Settled</span>.</p>
-    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-  </section>
 
 </main>
 

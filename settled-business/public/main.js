@@ -28,16 +28,16 @@
   const root = document.documentElement;
   const themeBtn = document.getElementById("themeToggle");
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const currentTheme = () => root.dataset.theme || (systemDark.matches ? "dark" : "light");
+  const currentTheme = () => root.dataset.mode || (systemDark.matches ? "dark" : "light");
 
   function paintThemeButton() {
     const dark = currentTheme() === "dark";
-    themeBtn.innerHTML = dark ? ICONS.sun : ICONS.moon;
+    themeBtn.innerHTML = dark ? ICONS.moon : ICONS.sun; // shows the mode you are in
     themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
   }
   function setTheme(next) {
     const apply = () => {
-      root.dataset.theme = next;
+      root.dataset.mode = next;
       try { localStorage.setItem("settledTheme", next); } catch (e) {}
       paintThemeButton();
     };
@@ -48,7 +48,7 @@
   systemDark.addEventListener("change", (e) => {
     let saved = null;
     try { saved = localStorage.getItem("settledTheme"); } catch (err) {}
-    if (!saved) { root.dataset.theme = e.matches ? "dark" : "light"; paintThemeButton(); }
+    if (!saved) { root.dataset.mode = e.matches ? "dark" : "light"; paintThemeButton(); }
   });
   paintThemeButton();
 
@@ -91,7 +91,7 @@
   function readoutHTML(r) {
     const tips = r.clean.map((t) => `<li>${esc(t)}</li>`);
     if (r.basic) tips.push(`<li><b>${esc(r.basic.title)}.</b> ${esc(r.basic.text)}</li>`);
-    const more = r.more > 0 ? `${r.more} more ${r.more === 1 ? "tip" : "tips"} for this room in the app.` : "That's everything for this room.";
+    const more = r.more > 0 ? `There ${r.more === 1 ? "is" : "are"} ${r.more} more ${r.more === 1 ? "tip" : "tips"} for this room in the app.` : "That's everything for this room.";
     return `
       <div class="readout-inner">
         <p class="readout-tag">${plural(r.total, "tip")}</p>
@@ -100,7 +100,7 @@
         <ul class="readout-tips">${tips.join("")}</ul>
         <div class="readout-foot">
           <span>${more}</span>
-          <a class="readout-link" href="${APP_URL}/?room=${encodeURIComponent(r.id)}">Open the ${esc(r.name.split(" &")[0].toLowerCase())} in the app</a>
+          <a class="readout-link" href="${APP_URL}/?room=${encodeURIComponent(r.id)}">See all ${r.total} tips in the app</a>
         </div>
       </div>`;
   }
@@ -139,15 +139,15 @@
 
   /* ---------- FAQ (questions page) ---------- */
   const FAQS = [
-    ["Is it really free?", "Yes. Every room and every tip is free to use."],
-    ["Can I save tips?", "Yes. Tap the heart on any tip and it goes in your Saved tab. If you sign in, your saved tips and your first-week list show up on your other devices too."],
-    ["Will it always be free?", "Everything that's free now will stay free. Later on we plan to add Settled Premium, an optional upgrade with extra features on top. You won't need it to use the guide."],
-    ["Is it on the App Store?", "No. You install it from your browser instead (the Install page shows how), so there's nothing to download from a store and updates show up straight away."],
-    ["Does it work without signal?", "Yes. After you've installed it and opened it once, every room and tip is saved on your phone."],
-    ["Do I need an account?", "No. You can use all of it without signing in. If you want an account, you can sign in with Google or with a code sent to your email. There's no password."],
-    ["Can I use it on my phone and my laptop?", "Yes. It works in any modern browser, and you can sign in with the same Google account or email on both."],
-    ["Is it just for the UK?", "It's written for UK homes, so it talks about fuse boxes, stopcocks and council bins. Most of the cleaning advice works anywhere though."],
-    ["Will there be more rooms?", "Yes. New rooms and guides will be added over time."],
+    ["Is it free?", "Yes, all of it. Every room and every tip is free to use."],
+    ["Do I need an account?", "No, you can use the whole thing without one. If you'd like your saved tips on more than one device, you can sign in with Google or with a code we email you. There's no password to remember."],
+    ["Can I save tips?", "Yes. Tap the heart on any tip and it goes in your Saved tab. Sign in and your saved tips and first-week list will be on your other devices too."],
+    ["Will it always be free?", "Everything that's free now will stay free. Later on we're planning Settled Premium, an optional upgrade with a few extras. You won't need it to use the guide."],
+    ["Is it on the App Store?", "No, you add it to your phone straight from your browser. The Install page shows you how. There's nothing to download from a store, and updates come through on their own."],
+    ["Does it work without signal?", "Yes. Once it's on your phone and you've opened it once, every room and tip is saved on it."],
+    ["Can I use it on my phone and my laptop?", "Yes. It works in any up-to-date browser, and you can sign in with the same Google account or email on both."],
+    ["Is it just for the UK?", "It's written for UK homes, so it talks about fuse boxes, stopcocks and council bins. A lot of the cleaning tips work anywhere though."],
+    ["Will there be more rooms?", "Yes, we're adding more of the house over time."],
   ];
   const faqList = document.getElementById("faqList");
   if (faqList) {

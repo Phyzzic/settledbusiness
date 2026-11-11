@@ -9,7 +9,7 @@
 <meta property="og:url" content="https://settled.business/plans">
 <meta property="og:title" content="What's next for Settled | Settled">
 <meta property="og:description" content="Where Settled is now and where it's going: more rooms and guides, and an optional Settled Premium later on. Everything free now stays free.">
-<meta name="theme-color" content="#FBEEDF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#EFF3EA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16201A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
@@ -29,7 +29,7 @@
   (function () {
     var t = null;
     try { t = localStorage.getItem("settledTheme"); } catch (e) {}
-    document.documentElement.dataset.theme = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.dataset.mode = t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   })();
   document.documentElement.classList.add("js");
 </script>
@@ -71,31 +71,27 @@
   <section class="plans" id="plans" aria-labelledby="plansTitle">
     <div class="section-head">
       <h1 id="plansTitle">What's next</h1>
-      <p>Where Settled is now, and where it's going.</p>
+      <p>Where Settled is now, and what we're working on next.</p>
     </div>
     <ol class="roadmap">
       <li class="stage is-now">
         <p class="stage-when">Now</p>
         <h3>Free for everyone</h3>
-        <p>Every room, every tip and every step-by-step guide, free. Sign in with Google or your email to use one account on your phone and computer.</p>
+        <p>Every room and every tip, free for everyone. Sign in with Google or your email if you'd like your saved tips on your phone and your computer.</p>
       </li>
       <li class="stage">
         <p class="stage-when">Next</p>
         <h3>More rooms and guides</h3>
-        <p>More of the jobs people actually get stuck on, like bleeding radiators, resetting the boiler and getting ready for winter, plus guides for flats and rented homes.</p>
+        <p>We're adding more of the house, like the loft and the stairs, plus guides for flats and for renting.</p>
       </li>
       <li class="stage">
         <p class="stage-when">Later</p>
         <h3>Settled Premium</h3>
-        <p>An optional paid upgrade with extra features on top, such as reminders for seasonal jobs and a checklist built around your own home. Everything that's free now will stay free.</p>
+        <p>Later on there'll be an optional paid upgrade with a few extras, like reminders for seasonal jobs. Everything that's free now will stay free.</p>
       </li>
     </ol>
   </section>
 
-  <section class="closing">
-    <p class="closing-title">Be <span class="u">Settled</span>.</p>
-    <a class="btn btn-clay btn-lg" data-app-link href="https://app.settled.business">Open the app</a>
-  </section>
 
 </main>
 
